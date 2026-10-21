@@ -1,0 +1,45 @@
+
+# Credenciales y archivos sensibles
+.env
+.env.*
+!.env.example
+.aws/
+credentials
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+entorno virtual/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Cache de herramientas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# Cobertura de pruebas
+.coverage
+.coverage.*
+htmlcov/
+
+# Archivos de salida locales
+output_*.json
+
+# Configuracion del editor
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
