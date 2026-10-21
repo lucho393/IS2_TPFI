@@ -34,10 +34,11 @@ jobs:
           python -m pycodestyle --config=.pycodestyle src tests
           python -m pydocstyle src
 
-      - name: Ejecutar pruebas
+            - name: Ejecutar pruebas
         run: python -m pytest --cov=src --cov-report=term-missing
         env:
           PYTHONPATH: src
+          AWS_DEFAULT_REGION: us-east-1
 
       - name: Generar documentacion con pdoc
         run: python -m pdoc --output-directory docs src
