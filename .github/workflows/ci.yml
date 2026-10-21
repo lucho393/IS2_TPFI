@@ -34,7 +34,7 @@ jobs:
           python -m pycodestyle --config=.pycodestyle src tests
           python -m pydocstyle src
 
-            - name: Ejecutar pruebas
+      - name: Ejecutar pruebas
         run: python -m pytest --cov=src --cov-report=term-missing
         env:
           PYTHONPATH: src
@@ -44,6 +44,7 @@ jobs:
         run: python -m pdoc --output-directory docs src
         env:
           PYTHONPATH: src
+          AWS_DEFAULT_REGION: us-east-1
 
       - name: Guardar documentacion generada
         uses: actions/upload-artifact@v4
