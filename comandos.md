@@ -1,6 +1,6 @@
 Iniciar servidor — Terminal 1
 Inicia el servidor TCP en el puerto 8080 y muestra mensajes detallados.
-python src/singletonproxyobserver.py
+python src/singletonproxyobserver.py -v
 
 Camino feliz — Terminal 2
 GET: consulta un registro existente y guarda la respuesta en un archivo JSON.
@@ -60,3 +60,13 @@ python -m pyright src
 
 Bandit: analiza posibles riesgos de seguridad en el código fuente.
 python -m bandit -r src
+
+todos los tests
+python -m ruff check src tests
+python -m black --check src tests
+python -m pycodestyle --max-line-length=88 src tests
+python -m pydocstyle src
+python -m mypy src
+python -m pyright src
+python -m bandit -r src
+python -m pytest tests --cov=src --cov-report=term-missing

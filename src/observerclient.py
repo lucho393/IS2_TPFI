@@ -116,7 +116,7 @@ def main():
                     raise ConnectionError("Se perdió la conexión con el servidor.")
 
                 response = json.loads(response_data.decode("utf-8"))
-
+                print(f"Se modificó el registro {response.get('id', 'desconocido')}")
                 print(
                     json.dumps(
                         response,
